@@ -1,4 +1,6 @@
 Math2B Integration and Series 
+ 
+---
 
 Instructor: Peter McHale
 
