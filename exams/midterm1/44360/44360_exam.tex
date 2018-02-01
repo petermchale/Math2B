@@ -1,0 +1,189 @@
+% Exam Template for UMTYMP and Math Department courses
+% http://mathcep.umn.edu/umtymp/
+%
+% Using Philip Hirschhorn's exam.cls: http://www-math.mit.edu/~psh/#ExamCls
+%
+% run pdflatex on a finished exam at least three times to do the grading table on front page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% These lines can probably stay unchanged, 
+\documentclass[addpoints,11pt]{exam}
+\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim, xspace, setspace}
+% you can remove these two lines if you're not making pictures with tikz.
+\RequirePackage{tikz}
+\usetikzlibrary {plotmarks}
+
+% By default LaTeX uses large margins.  This doesn't work well on exams; problems
+% end up in the "middle" of the page, reducing the amount of space for students
+% to work on them.
+\usepackage[margin=1in]{geometry}
+
+
+% Here's where you edit the Class, Exam, Date, etc.
+\newcommand{\class}{Math 2B 44360}
+\newcommand{\term}{Winter 2018}
+\newcommand{\examnum}{Midterm 1}
+\newcommand{\examdate}{Wed Jan 31 2018}
+\newcommand{\examtime}{9.00am}
+
+% For an exam, single spacing is most appropriate
+\singlespacing
+% \onehalfspacing
+% \doublespacing
+
+% For an exam, we generally want to turn off paragraph indentation
+\parindent 0ex
+
+\begin{document} 
+
+% These commands set up the running header on the top of the exam pages
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+\begin{flushright}
+\begin{tabular}{p{2.8in} r l}
+\textbf{\class} & \textbf{Student's Name (Print):} & \makebox[1.5in]{\hrulefill}\\
+\term & &\\
+\examnum &\textbf{Student's ID:} & \makebox[1.5in]{\hrulefill}\\
+\examdate &&\\
+\examtime &  \textbf{Discussion Section Code:} & \makebox[1.5in]{\hrulefill}
+\end{tabular}\\
+\end{flushright}
+\rule[1ex]{\textwidth}{.1pt}
+
+{\bf Print your name and student ID on the top of this page.} \\
+
+This exam contains \numpages\ pages (including this cover page) and
+\numquestions\ problems. 
+% {\bf Note that some equations are numbered.}  
+You may \textit{not} use your books, notes, or any calculator in this exam. Do not write in the grading table below.\\
+
+The following rules apply to the answers you provide in this exam:
+
+\begin{minipage}[t]{3.7in}
+\vspace{0pt}
+\begin{itemize}
+
+\item \textbf{Organize your work}, in a neat and coherent way.   
+
+\item \textbf{Unsupported answers will not receive full credit}.  Calculation or verbal explanation is expected. 
+
+\item \textbf{If you need more space, use the back of the pages}; clearly indicate when you have done this.
+
+\item \textbf{Box your final answer} for full credit. 
+
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{2.3in}
+\vspace{0pt}
+\gradetable[v]%[pages]  % Use [pages] to have grading table by page instead of question
+\end{minipage}
+
+\newpage % End of cover page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% See http://www-math.mit.edu/~psh/#ExamCls for full documentation, but the questions
+% below give an idea of how to write questions [with parts] and have the points
+% tracked automatically on the cover page.
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{questions} 
+
+%%% L2
+\question
+\begin{parts} 
+\part[5]
+Estimate the area under the parabola $y=x^2$ from $x=0$ to $x=4$ using 4 approximating (Riemann) rectangles and right endpoints. 
+\vfill 
+
+\part[5]
+Is this an upper bound or lower bound on the actual area? Illustrate why.
+\vfill 
+
+\part[5]
+Using right endpoints, find an expression for the actual area as the limit of a Riemann sum. Do not evaluate your expression. 
+\vfill 
+
+\end{parts} 
+
+\newpage 
+
+\question
+Evaluate the following: 
+\begin{parts} 
+
+%%% L5
+\part[5]
+\begin{eqnarray*}
+\int (2 + \tan^2\theta) \, d\theta 
+& \left[ \mbox{Hint: }
+\frac{d}{d\theta} \tan\theta = \frac{1}{\cos^2\theta}.
+\right]
+\end{eqnarray*}
+\vfill 
+
+%%% L6 
+\part[5]
+\[ 
+\int x^3 \sqrt{x^2 + 1} \, dx 
+\]
+\vfill 
+
+%%% L6 
+\part[5]
+\[
+\int \frac{\cos(\ln t)}{t} \, dt 
+\] 
+\vfill
+\end{parts} 
+
+\newpage 
+
+%%% L6 
+\question[5]
+Given that $\int_0^9 f(x) \, dx = 4$, evaluate $\int_0^3 xf(x^2) \, dx$. 
+\vfill 
+
+%%% L4 
+\question[5] 
+Evaluate 
+\[
+\frac{d}{dx} \int_1^{e^x} \ln t \, dt .
+\]
+\vfill 
+
+
+\question[5]
+A particle moves along a line with velocity $v(t) = 3t - 5$ at time $t$. Find the displacement of the object in the time interval $[0, 3]$. 
+\vfill 
+\vfill
+
+\newpage 
+
+%%% L7
+\question[5]
+Compute the area of the region enclosed by $y=\sin x, y=x, x = \pi/2$ and $x = \pi$. 
+\vfill 
+
+%%% L8
+\question 
+\begin{parts} 
+\part[5]
+Find the volume of the solid obtained by rotating the region bounded by the curves 
+$2x = y^2, x = 0$ and $y=4$ about the $y$-axis. 
+\vfill 
+\part[5]
+Set up an integral to find the volume of the solid obtained by rotating the region bounded by $y = x^3, y=0$ and $x=1$ about the axis $x=2$. Do not evaluate the integral. 
+\vfill 
+\end{parts} 
+
+\end{questions} 
+
+\end{document}
